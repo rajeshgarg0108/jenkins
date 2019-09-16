@@ -1,0 +1,11 @@
+1-) download jenkins.war
+2-) run jenkins. war  java -jar jenkins.war
+3-) one up run in browser https://localhost:8080
+for the first time provide admin password , path will be shown on home page
+4-) there will be two option , select first one to download and install all the plugings
+5-) you will need pipeline plugin as well
+6-) ninja1 is the init joband build is the build job
+7-) place these tow jobs under jobs folder of you .jenkins which may be in users me
+8-) restart jenkins
+9-) run ninja1 job
+10-) you may need to trigger manually build job after some time

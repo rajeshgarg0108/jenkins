@@ -1,0 +1,16 @@
+Started by user [8mha:////4N30K+MxYQc+1+kYQV+fys459S62R8zWpwNqIYDw8FEvAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace C:\Users\nehag\.jenkins\workspace\ninja1
+[ninja1] $ cmd /c call C:\Users\nehag\AppData\Local\Temp\jenkins3733690525776402017.bat
+
+C:\Users\nehag\.jenkins\workspace\ninja1>cmd
+Microsoft Windows [Version 10.0.17763.678]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\nehag\.jenkins\workspace\ninja1>
+C:\Users\nehag\.jenkins\workspace\ninja1>cd C:\Program Files\Docker Toolbox\ 
+
+C:\Program Files\Docker Toolbox>start.sh
+
+C:\Program Files\Docker Toolbox>exit 0 
+Finished: SUCCESS

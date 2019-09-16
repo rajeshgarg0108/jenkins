@@ -1,0 +1,80 @@
+Started by user [8mha:////4N30K+MxYQc+1+kYQV+fys459S62R8zWpwNqIYDw8FEvAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace C:\Users\nehag\.jenkins\workspace\build
+[build] $ cmd /c call C:\Users\nehag\AppData\Local\Temp\jenkins1401744531380755556.bat
+
+C:\Users\nehag\.jenkins\workspace\build>cd C:\Users\me\njs 
+
+C:\Users\me\njs>docker-compose build 
+mongo uses an image, skipping
+Building web
+Step 1/7 : FROM node:10
+ ---> f7949667ac49
+Step 2/7 : WORKDIR /app
+ ---> Using cache
+ ---> cc8ee9821878
+Step 3/7 : COPY package*.json ./app/
+ ---> Using cache
+ ---> 5790b6d6f554
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> d120e74dd8fc
+Step 5/7 : COPY . /app/
+ ---> 6ecfb938201e
+Step 6/7 : CMD ["node", "demo.js"]
+ ---> Running in c8eaa670c255
+Removing intermediate container c8eaa670c255
+ ---> d1cb2e61ad73
+Step 7/7 : EXPOSE 8082
+ ---> Running in e99f17aa5b8a
+Removing intermediate container e99f17aa5b8a
+ ---> 7b51ff37b169
+Successfully built 7b51ff37b169
+Successfully tagged second:latest
+
+C:\Users\me\njs>docker-compose up 
+Starting njs_mongo_1 ... 
+[1A[2KStarting njs_mongo_1 ... [32mdone[0m[1BRecreating njs_web_1 ... 
+[1A[2KRecreating njs_web_1 ... [32mdone[0m[1BAttaching to njs_mongo_1, njs_web_1
+[33mweb_1    |[0m just before index.hmtl
+[33mweb_1    |[0m /app
+[36mmongo_1  |[0m 2019-09-16T03:07:04.659+0000 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+[36mmongo_1  |[0m 2019-09-16T03:07:04.791+0000 I  CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=1671a903c689
+[36mmongo_1  |[0m 2019-09-16T03:07:04.792+0000 I  CONTROL  [initandlisten] db version v4.2.0
+[36mmongo_1  |[0m 2019-09-16T03:07:04.792+0000 I  CONTROL  [initandlisten] git version: a4b751dcf51dd249c5865812b390cfd1c0129c30
+[36mmongo_1  |[0m 2019-09-16T03:07:04.793+0000 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+[36mmongo_1  |[0m 2019-09-16T03:07:04.794+0000 I  CONTROL  [initandlisten] allocator: tcmalloc
+[36mmongo_1  |[0m 2019-09-16T03:07:04.795+0000 I  CONTROL  [initandlisten] modules: none
+[36mmongo_1  |[0m 2019-09-16T03:07:04.795+0000 I  CONTROL  [initandlisten] build environment:
+[36mmongo_1  |[0m 2019-09-16T03:07:04.796+0000 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+[36mmongo_1  |[0m 2019-09-16T03:07:04.797+0000 I  CONTROL  [initandlisten]     distarch: x86_64
+[36mmongo_1  |[0m 2019-09-16T03:07:04.798+0000 I  CONTROL  [initandlisten]     target_arch: x86_64
+[36mmongo_1  |[0m 2019-09-16T03:07:04.798+0000 I  CONTROL  [initandlisten] options: { net: { bindIp: "*" } }
+[36mmongo_1  |[0m 2019-09-16T03:07:04.814+0000 I  STORAGE  [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+[36mmongo_1  |[0m 2019-09-16T03:07:04.815+0000 I  STORAGE  [initandlisten] 
+[36mmongo_1  |[0m 2019-09-16T03:07:04.816+0000 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+[36mmongo_1  |[0m 2019-09-16T03:07:04.817+0000 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+[36mmongo_1  |[0m 2019-09-16T03:07:04.818+0000 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=256M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+[36mmongo_1  |[0m 2019-09-16T03:07:06.564+0000 I  STORAGE  [initandlisten] WiredTiger message [1568603226:564058][1:0x7f5faecfcb00], txn-recover: Recovering log 8 through 9
+[36mmongo_1  |[0m 2019-09-16T03:07:07.113+0000 I  STORAGE  [initandlisten] WiredTiger message [1568603227:113730][1:0x7f5faecfcb00], txn-recover: Recovering log 9 through 9
+[36mmongo_1  |[0m 2019-09-16T03:07:07.554+0000 I  STORAGE  [initandlisten] WiredTiger message [1568603227:554294][1:0x7f5faecfcb00], txn-recover: Main recovery loop: starting at 8/6656 to 9/256
+[36mmongo_1  |[0m 2019-09-16T03:07:07.729+0000 I  STORAGE  [initandlisten] WiredTiger message [1568603227:729488][1:0x7f5faecfcb00], txn-recover: Recovering log 8 through 9
+[36mmongo_1  |[0m 2019-09-16T03:07:07.840+0000 I  STORAGE  [initandlisten] WiredTiger message [1568603227:840940][1:0x7f5faecfcb00], txn-recover: Recovering log 9 through 9
+[36mmongo_1  |[0m 2019-09-16T03:07:07.920+0000 I  STORAGE  [initandlisten] WiredTiger message [1568603227:920959][1:0x7f5faecfcb00], txn-recover: Set global recovery timestamp: (0,0)
+[36mmongo_1  |[0m 2019-09-16T03:07:08.001+0000 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+[36mmongo_1  |[0m 2019-09-16T03:07:08.267+0000 I  STORAGE  [initandlisten] Timestamp monitor starting
+[36mmongo_1  |[0m 2019-09-16T03:07:08.269+0000 I  CONTROL  [initandlisten] 
+[36mmongo_1  |[0m 2019-09-16T03:07:08.270+0000 I  CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+[36mmongo_1  |[0m 2019-09-16T03:07:08.270+0000 I  CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+[36mmongo_1  |[0m 2019-09-16T03:07:08.271+0000 I  CONTROL  [initandlisten] 
+[36mmongo_1  |[0m 2019-09-16T03:07:09.126+0000 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+[36mmongo_1  |[0m 2019-09-16T03:07:09.167+0000 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+[36mmongo_1  |[0m 2019-09-16T03:07:09.209+0000 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+[36mmongo_1  |[0m 2019-09-16T03:07:09.211+0000 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+[36mmongo_1  |[0m 2019-09-16T03:07:09.322+0000 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+[36mmongo_1  |[0m 2019-09-16T03:07:09.325+0000 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+[36mmongo_1  |[0m 2019-09-16T03:07:09.357+0000 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+[36mmongo_1  |[0m 2019-09-16T03:07:09.363+0000 I  NETWORK  [initandlisten] Listening on /tmp/mongodb-27017.sock
+[36mmongo_1  |[0m 2019-09-16T03:07:09.366+0000 I  NETWORK  [initandlisten] Listening on 0.0.0.0
+[36mmongo_1  |[0m 2019-09-16T03:07:09.367+0000 I  NETWORK  [initandlisten] waiting for connections on port 27017
+[36mmongo_1  |[0m 2019-09-16T03:07:09.370+0000 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
